@@ -14,44 +14,16 @@ class Book:
     def delete(self):
         answer1 = str(input("Хотите удалить контакт?\nНапишите 'ДА',если хотите или 'Нет' если нет:\n"))
         if answer1.startswith("Д"):
-            how = int(input("Какой именно?:\n"))
-            if how == 1:
-                del(self.contacts["Witalliy Wyshynski"])
-                print("Удаление...")
-                sleep(2)
-                print("Контакт успешно удален!")
-                print("Теперь ваш список:\n", self.contacts)
-                print(self.statem_2())
-            elif how == 2:
-                del(self.contacts["Olga Wyshynska"])
-                print("Удаление...")
-                sleep(2)
-                print("Контакт успешно удален!")
-                print("Теперь ваш список:\n", self.contacts)
-                print(self.statem_2())
-            elif how == 3:
-                del(self.contacts["Grandad Valeriy"])
-                print("Удаление...")
-                sleep(2)
-                print("Контакт успешно удален!")
-                print("Теперь ваш список:\n", self.contacts)
-                print(self.statem_2())
-            elif how == 4:
-                del(self.contacts["Grandmother Tanya"])
-                print("Удаление...")
-                sleep(2)
-                print("Контакт успешно удален!")
-                print("Теперь ваш список:\n", self.contacts)
-                print(self.statem_2())
-            elif how == 5:
-                del(self.contacts["Artur Wyshynski"])
-                print("Удаление...")
-                sleep(2)
-                print("Контакт успешно удален!")
-                print("Теперь ваш список:\n", self.contacts)
-                print(self.statem_2())
-            elif answer1.startswith("Н"):
-                print(self.statem_2())
+            how = str(input("Какой именно?:\n"))
+            for usr in self.contacts:
+                if usr == how:
+                    return "Удаление..."
+                    sleep(2)
+                    return f"Контакт {usr} удален!"
+                    print(self.statem_2())
+                else:
+                    return "В списке нету такого контакта."
+                    print(self.statem_2())
 
     def add(self):
         answer2 = str(input("Добавить контакт?:\n"))  #There you mast answer yes or no!
