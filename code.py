@@ -6,10 +6,7 @@ class Book:
     def start1(self):
         self.sets = str(input(">>>"))
     
-    contacts = {"Witalliy Wyshynski":"0504737747",
-                        "Olga Wyshynska":"0504600710",
-                        "Grandad Valeriy":"0663779922",
-                        "Grandmuther Tanya":"0668591466"}
+    contacts = {}
 
     def delete(self):
         answer1 = str(input("Хотите удалить контакт?\nНапишите 'ДА',если хотите или 'Нет' если нет:\n"))
