@@ -11,15 +11,16 @@ class Book:
     def delete(self):
         answer1 = str(input("Хотите удалить контакт?\nНапишите 'ДА',если хотите или 'Нет' если нет:\n"))
         if answer1.startswith("Д"):
-            how = str(input("Какой именно?:\n"))
+            how = str(input("Какой именно?:[Имя]\n"))
             for usr in self.contacts:
                 if usr == how:
-                    return "Удаление..."
+                    print("Удаление...")
+                    del self.contacts[usr]
                     sleep(2)
-                    return f"Контакт {usr} удален!"
+                    print("Контакт успешно удален!")
                     print(self.statem_2())
                 else:
-                    return "В списке нету такого контакта."
+                    print("В списке нету такого контакта.")
                     print(self.statem_2())
 
     def add(self):
@@ -76,9 +77,3 @@ class Book:
 
 p = Book()
 print(p.statem())
-
-file = "Adress_book"
-
-f = open("file","w")
-pickle.dump(Book,f)
-f.close()
