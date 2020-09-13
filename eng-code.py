@@ -9,7 +9,7 @@ class Book:
     contacts = {}
 
     def delete(self):
-        answer1 = str(input("Want to delete the contact?\nEnter 'Yes',if yes or 'No' if no:\n"))
+        answer1 = str(input("Want to delete the contact?\nEnter 'Yes', if yes or 'No' if no:\n"))
         if answer1.startswith("Y"):
             how = str(input("Which one?:[name]\n"))
             for usr in self.contacts:
@@ -52,7 +52,7 @@ class Book:
     
     def statem(self):
         print("Adress book v1.0!\nWrite 'Delete','Add','View' if you want to delete, add or view the book!")
-        print("((You should write the words with a capital letеer!))")
+        print("((You should write the words with a capital lettеr!))")
         self.start1()
         if self.sets.startswith("A"):
             print(self.add())
